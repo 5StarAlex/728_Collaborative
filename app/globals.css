@@ -3166,6 +3166,156 @@ body {
   }
 }
 
+/* Exact tab-banner standardization pass. Applies to About and every interior tab. */
+.about-hero,
+.page-hero,
+.hero-services,
+.hero-consulting,
+.hero-learning,
+.hero-support,
+.hero-industries,
+.hero-industry-detail,
+.hero-government,
+.hero-insights,
+.hero-resources,
+.hero-contact,
+.hero-schedule,
+.hero-proposal,
+.hero-legal {
+  min-height: clamp(420px, 35vw, 504px) !important;
+  padding: clamp(72px, 7vw, 96px) 0 !important;
+  display: grid !important;
+  align-items: center !important;
+  overflow: hidden !important;
+  border-bottom: 1px solid rgba(222, 209, 194, .95) !important;
+  background:
+    linear-gradient(90deg, rgba(250, 246, 239, .94) 0%, rgba(250, 246, 239, .86) 48%, rgba(250, 246, 239, .72) 100%),
+    url("/assets/photos/strategy-meeting.jpg") center / cover no-repeat !important;
+}
+
+.about-hero::before,
+.about-hero::after,
+.about-hero-motion,
+.page-hero::before,
+.page-hero::after,
+.page-hero .container::before,
+.page-hero .container::after,
+.page-hero .narrow::before,
+.page-hero .narrow::after {
+  display: none !important;
+}
+
+.about-hero-overlay,
+.page-hero .container,
+.page-hero .narrow {
+  width: min(100% - 48px, 900px) !important;
+  max-width: 900px !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  margin-inline: auto !important;
+  display: grid !important;
+  justify-items: center !important;
+  text-align: center !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.about-hero .eyebrow,
+.page-hero .eyebrow {
+  display: none !important;
+}
+
+.about-hero h1,
+.page-hero h1 {
+  max-width: 860px !important;
+  margin: 0 auto clamp(20px, 2.4vw, 28px) !important;
+  color: var(--site-ink, var(--espresso)) !important;
+  font-family: var(--font-serif), Georgia, serif !important;
+  font-size: clamp(3rem, 4.8vw, 4.7rem) !important;
+  font-weight: 800 !important;
+  line-height: .98 !important;
+  letter-spacing: 0 !important;
+}
+
+.about-hero p:not(.eyebrow),
+.page-hero .large,
+.page-hero p:not(.eyebrow) {
+  max-width: 720px !important;
+  margin: 0 auto clamp(28px, 3vw, 42px) !important;
+  color: var(--site-muted, var(--charcoal)) !important;
+  font-family: var(--font-sans), Arial, sans-serif !important;
+  font-size: clamp(1.08rem, 1.35vw, 1.28rem) !important;
+  font-weight: 750 !important;
+  line-height: 1.62 !important;
+}
+
+.about-hero .button,
+.page-hero .button-row .button {
+  min-width: 188px !important;
+  min-height: 48px !important;
+  padding: 13px 22px !important;
+  border-radius: 2px !important;
+  font-family: var(--font-sans), Arial, sans-serif !important;
+  font-size: .95rem !important;
+  font-weight: 900 !important;
+  line-height: 1.2 !important;
+}
+
+.page-hero .button-row {
+  justify-content: center !important;
+  gap: 12px !important;
+}
+
+@media (max-width: 620px) {
+  .about-hero,
+  .page-hero,
+  .hero-services,
+  .hero-consulting,
+  .hero-learning,
+  .hero-support,
+  .hero-industries,
+  .hero-industry-detail,
+  .hero-government,
+  .hero-insights,
+  .hero-resources,
+  .hero-contact,
+  .hero-schedule,
+  .hero-proposal,
+  .hero-legal {
+    min-height: 360px !important;
+    padding: 52px 0 !important;
+  }
+
+  .about-hero-overlay,
+  .page-hero .container,
+  .page-hero .narrow {
+    width: min(100% - 36px, 354px) !important;
+    max-width: 354px !important;
+  }
+
+  .about-hero h1,
+  .page-hero h1 {
+    font-size: clamp(2.15rem, 8.8vw, 2.65rem) !important;
+    line-height: 1.03 !important;
+    margin-bottom: 18px !important;
+  }
+
+  .about-hero p:not(.eyebrow),
+  .page-hero .large,
+  .page-hero p:not(.eyebrow) {
+    font-size: 1rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: 26px !important;
+  }
+
+  .about-hero .button,
+  .page-hero .button-row,
+  .page-hero .button-row .button {
+    width: min(100%, 318px) !important;
+    max-width: 318px !important;
+  }
+}
+
 /* Final hero alignment pass: interior tabs share one centered title system. */
 .page-hero .container,
 .page-hero .narrow {
@@ -3983,5 +4133,159 @@ body {
   .form-card,
   .contact-form {
     margin-inline: auto !important;
+  }
+}
+
+/* True final tab-banner contract: every non-home tab uses identical banner geometry. */
+.about-hero,
+.page-hero,
+.hero-services,
+.hero-consulting,
+.hero-learning,
+.hero-support,
+.hero-industries,
+.hero-industry-detail,
+.hero-government,
+.hero-insights,
+.hero-resources,
+.hero-contact,
+.hero-schedule,
+.hero-proposal,
+.hero-legal {
+  height: 504px !important;
+  min-height: 504px !important;
+  max-height: 504px !important;
+  padding: 0 !important;
+  display: grid !important;
+  align-items: center !important;
+  overflow: hidden !important;
+  border-bottom: 1px solid rgba(222, 209, 194, .95) !important;
+  background:
+    linear-gradient(90deg, rgba(250, 246, 239, .94) 0%, rgba(250, 246, 239, .86) 48%, rgba(250, 246, 239, .72) 100%),
+    url("/assets/photos/strategy-meeting.jpg") center / cover no-repeat !important;
+}
+
+.about-hero::before,
+.about-hero::after,
+.about-hero-motion,
+.page-hero::before,
+.page-hero::after,
+.page-hero .container::before,
+.page-hero .container::after,
+.page-hero .narrow::before,
+.page-hero .narrow::after {
+  display: none !important;
+}
+
+.about-hero-overlay,
+.page-hero .container,
+.page-hero .narrow {
+  width: min(100% - 48px, 900px) !important;
+  max-width: 900px !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  margin-inline: auto !important;
+  display: grid !important;
+  justify-items: center !important;
+  text-align: center !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.about-hero .eyebrow,
+.page-hero .eyebrow {
+  display: none !important;
+}
+
+.about-hero h1,
+.page-hero h1 {
+  max-width: 860px !important;
+  margin: 0 auto 24px !important;
+  color: var(--site-ink, var(--espresso)) !important;
+  font-family: var(--font-serif), Georgia, serif !important;
+  font-size: clamp(3rem, 4.8vw, 4.7rem) !important;
+  font-weight: 800 !important;
+  line-height: .98 !important;
+  letter-spacing: 0 !important;
+}
+
+.about-hero p:not(.eyebrow),
+.page-hero .large,
+.page-hero p:not(.eyebrow) {
+  max-width: 720px !important;
+  margin: 0 auto 34px !important;
+  color: var(--site-muted, var(--charcoal)) !important;
+  font-family: var(--font-sans), Arial, sans-serif !important;
+  font-size: clamp(1.08rem, 1.35vw, 1.28rem) !important;
+  font-weight: 750 !important;
+  line-height: 1.62 !important;
+}
+
+.about-hero .button,
+.page-hero .button-row .button {
+  min-width: 188px !important;
+  min-height: 48px !important;
+  padding: 13px 22px !important;
+  border-radius: 2px !important;
+  font-family: var(--font-sans), Arial, sans-serif !important;
+  font-size: .95rem !important;
+  font-weight: 900 !important;
+  line-height: 1.2 !important;
+}
+
+.page-hero .button-row {
+  justify-content: center !important;
+  gap: 12px !important;
+}
+
+@media (max-width: 620px) {
+  .about-hero,
+  .page-hero,
+  .hero-services,
+  .hero-consulting,
+  .hero-learning,
+  .hero-support,
+  .hero-industries,
+  .hero-industry-detail,
+  .hero-government,
+  .hero-insights,
+  .hero-resources,
+  .hero-contact,
+  .hero-schedule,
+  .hero-proposal,
+  .hero-legal {
+    height: 360px !important;
+    min-height: 360px !important;
+    max-height: 360px !important;
+    padding: 0 !important;
+  }
+
+  .about-hero-overlay,
+  .page-hero .container,
+  .page-hero .narrow {
+    width: min(100% - 36px, 354px) !important;
+    max-width: 354px !important;
+  }
+
+  .about-hero h1,
+  .page-hero h1 {
+    font-size: clamp(2.05rem, 8.2vw, 2.45rem) !important;
+    line-height: 1.03 !important;
+    margin-bottom: 16px !important;
+  }
+
+  .about-hero p:not(.eyebrow),
+  .page-hero .large,
+  .page-hero p:not(.eyebrow) {
+    font-size: .98rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 22px !important;
+  }
+
+  .about-hero .button,
+  .page-hero .button-row,
+  .page-hero .button-row .button {
+    width: min(100%, 318px) !important;
+    max-width: 318px !important;
   }
 }
