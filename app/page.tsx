@@ -65,6 +65,23 @@ export default function Home() {
           <a className="landing-icon-circle" href="https://www.linkedin.com" aria-label="LinkedIn">in</a>
           <Link href="/schedule" className="landing-btn landing-btn-primary">Schedule a Discovery Call -&gt;</Link>
         </div>
+        <details className="landing-mobile-menu">
+          <summary aria-label="Open mobile navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </summary>
+          <div className="landing-mobile-menu-panel">
+            <Link href="/">Home</Link>
+            <Link href="/about">About</Link>
+            <Link href="/services">Services</Link>
+            <Link href="/industries">Industries</Link>
+            <Link href="/government-contracting">Government Contracting</Link>
+            <Link href="/insights">Insights</Link>
+            <Link href="/resources">Resources</Link>
+            <Link href="/contact">Contact</Link>
+          </div>
+        </details>
       </nav>
 
       <section id="home-main" className="landing-hero landing-hero-centered">
@@ -76,7 +93,7 @@ export default function Home() {
           <h1 className="landing-title landing-title-desktop">Stronger people.<br />Stronger organizations.<br /><em>Lasting impact.</em></h1>
           <h1 className="landing-title landing-title-mobile">Stronger people.<br />Stronger organizations.<br /><em>Lasting impact.</em></h1>
           <p className="landing-copy landing-copy-desktop">
-            728 Collaborative helps organizations strengthen leadership, develop their workforce, improve systems, and create sustainable results through strategic consulting and professional learning. Through SW@Home, we also help individuals and families navigate resources, transitions, and essential support services.
+            Consulting, training, and support that help people and organizations move forward.
           </p>
           <p className="landing-copy landing-copy-mobile">
             Consulting, training, and support that help people and organizations move forward.
