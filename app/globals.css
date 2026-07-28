@@ -3316,6 +3316,113 @@ body {
   }
 }
 
+/* Final mobile navigation overlay: full-height, outside the sticky header. */
+.mobile-backdrop {
+  z-index: 9000 !important;
+}
+
+.mobile-panel {
+  z-index: 9010 !important;
+}
+
+@media (max-width: 1079px) {
+  body.nav-lock {
+    overflow: hidden !important;
+    touch-action: none;
+  }
+
+  .mobile-backdrop {
+    position: fixed !important;
+    inset: 0 !important;
+    min-height: 100dvh !important;
+    background: rgba(47, 36, 29, .42) !important;
+    backdrop-filter: blur(2px);
+  }
+
+  .mobile-panel {
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: auto !important;
+    width: min(92vw, 420px) !important;
+    height: 100dvh !important;
+    min-height: 100dvh !important;
+    max-height: 100dvh !important;
+    padding: max(20px, env(safe-area-inset-top)) 24px max(28px, env(safe-area-inset-bottom)) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 18px !important;
+    overflow: hidden !important;
+    overscroll-behavior: contain !important;
+    background: var(--site-cream, var(--cream)) !important;
+    border-left: 1px solid rgba(207, 193, 178, .8) !important;
+    box-shadow: -24px 0 54px rgba(47, 36, 29, .22) !important;
+    transform: translateX(105%) !important;
+  }
+
+  .mobile-panel.show {
+    transform: translateX(0) !important;
+  }
+
+  .close-button {
+    float: none !important;
+    align-self: flex-end !important;
+    min-width: 72px !important;
+    min-height: 44px !important;
+    border-radius: 3px !important;
+  }
+
+  .mobile-logo img {
+    width: 132px !important;
+    margin: 0 0 8px !important;
+  }
+
+  .mobile-panel nav {
+    display: grid !important;
+    gap: 0 !important;
+    clear: none !important;
+    min-height: 0 !important;
+    overflow-y: auto !important;
+    padding-right: 2px !important;
+  }
+
+  .mobile-panel nav a {
+    min-height: 48px !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 13px 0 !important;
+    font-size: 1.02rem !important;
+    font-weight: 900 !important;
+    border-bottom: 1px solid rgba(207, 193, 178, .72) !important;
+  }
+
+  .mobile-subnav {
+    margin: 8px 0 4px !important;
+    padding: 6px 0 6px 16px !important;
+    border-left: 2px solid rgba(91, 70, 54, .24) !important;
+  }
+
+  .mobile-subnav a {
+    min-height: 42px !important;
+    font-size: .95rem !important;
+    font-weight: 800 !important;
+  }
+
+  .mobile-panel > .button {
+    width: 100% !important;
+    flex: 0 0 auto !important;
+    margin-top: 0 !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .mobile-panel {
+    width: 100vw !important;
+    border-left: 0 !important;
+  }
+}
+
 /* Final hero alignment pass: interior tabs share one centered title system. */
 .page-hero .container,
 .page-hero .narrow {

@@ -46,44 +46,46 @@ export function Header() {
   }, [open]);
 
   return (
-    <header className={`site-header ${scrolled ? "is-scrolled" : ""}`}>
-      <a className="skip-link" href="#main">Skip to content</a>
-      <div className="container nav-shell">
-        <Link href="/" className="logo-link" aria-label="728 Collaborative home">
-          <Image src="/assets/728-collaborative-logo.svg" alt="728 Collaborative LLC" width={190} height={190} priority />
-        </Link>
-        <nav className="desktop-nav" aria-label="Primary">
-          {navItems.map((item) =>
-            item.label === "Services" ? (
-              <div className="nav-dropdown" key={item.href}>
-                <Link href={item.href}>{item.label}</Link>
-                <div className="mega-menu" aria-label="Services submenu">
-                  {divisions.map((division) => (
-                    <Link href={division.href} key={division.name}>
-                      <span>{division.name}</span>
-                      <small>{division.title}</small>
+    <>
+      <header className={`site-header ${scrolled ? "is-scrolled" : ""}`}>
+        <a className="skip-link" href="#main">Skip to content</a>
+        <div className="container nav-shell">
+          <Link href="/" className="logo-link" aria-label="728 Collaborative home">
+            <Image src="/assets/728-collaborative-logo.svg" alt="728 Collaborative LLC" width={190} height={190} priority />
+          </Link>
+          <nav className="desktop-nav" aria-label="Primary">
+            {navItems.map((item) =>
+              item.label === "Services" ? (
+                <div className="nav-dropdown" key={item.href}>
+                  <Link href={item.href}>{item.label}</Link>
+                  <div className="mega-menu" aria-label="Services submenu">
+                    {divisions.map((division) => (
+                      <Link href={division.href} key={division.name}>
+                        <span>{division.name}</span>
+                        <small>{division.title}</small>
+                      </Link>
+                    ))}
+                    <Link href="/services">
+                      <span>All Services</span>
+                      <small>Compare divisions and engagement paths</small>
                     </Link>
-                  ))}
-                  <Link href="/services">
-                    <span>All Services</span>
-                    <small>Compare divisions and engagement paths</small>
-                  </Link>
+                  </div>
                 </div>
-              </div>
-            ) : (
-              <Link href={item.href} key={item.href}>{item.label}</Link>
-            )
-          )}
-        </nav>
-        <div className="nav-actions">
-          <a className="icon-link" href="https://www.linkedin.com" aria-label="LinkedIn" onClick={() => trackEvent("linkedin_click")}>in</a>
-          <Link className="button button-primary compact" href="/schedule" onClick={() => trackEvent("discovery_call_click")}>Schedule a Discovery Call</Link>
-          <button className="menu-button" type="button" aria-expanded={open} aria-controls="mobile-menu" onClick={() => setOpen(true)}>
-            <span></span><span></span><span></span>
-            <span className="sr-only">Open menu</span>
-          </button>
+              ) : (
+                <Link href={item.href} key={item.href}>{item.label}</Link>
+              )
+            )}
+          </nav>
+          <div className="nav-actions">
+            <a className="icon-link" href="https://www.linkedin.com" aria-label="LinkedIn" onClick={() => trackEvent("linkedin_click")}>in</a>
+            <Link className="button button-primary compact" href="/schedule" onClick={() => trackEvent("discovery_call_click")}>Schedule a Discovery Call</Link>
+            <button className="menu-button" type="button" aria-expanded={open} aria-controls="mobile-menu" onClick={() => setOpen(true)}>
+              <span></span><span></span><span></span>
+              <span className="sr-only">Open menu</span>
+            </button>
+          </div>
         </div>
-      </div>
+      </header>
       <div className={`mobile-backdrop ${open ? "show" : ""}`} onClick={() => setOpen(false)} />
       <aside id="mobile-menu" className={`mobile-panel ${open ? "show" : ""}`} aria-hidden={!open} aria-label="Mobile navigation">
         <button ref={closeRef} className="close-button" type="button" onClick={() => setOpen(false)}>Close</button>
@@ -102,6 +104,6 @@ export function Header() {
         </nav>
         <Link className="button button-primary" href="/schedule" onClick={() => setOpen(false)}>Schedule a Discovery Call</Link>
       </aside>
-    </header>
+    </>
   );
 }
