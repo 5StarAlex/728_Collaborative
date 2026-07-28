@@ -14,8 +14,8 @@ export function Footer() {
             <p>Tell us about your goals, workforce needs, training priorities, or organizational challenges. We will help you determine the right next step.</p>
           </div>
           <div className="footer-cta-actions">
-            <Link href="/schedule" className="footer-btn footer-btn-text">Schedule a Discovery Call -&gt;</Link>
-            <Link href="/request-proposal" className="footer-btn footer-btn-outline">Request a Proposal -&gt;</Link>
+            <Link href="/schedule" className="footer-btn footer-btn-text">Schedule a Discovery Call →</Link>
+            <Link href="/request-proposal" className="footer-btn footer-btn-outline">Request a Proposal →</Link>
           </div>
         </div>
       </div>

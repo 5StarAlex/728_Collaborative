@@ -2,13 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { divisions, navItems } from "@/lib/site-data";
 import { trackEvent } from "./Analytics";
 
 export function Header() {
-  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const closeRef = useRef<HTMLButtonElement>(null);
@@ -46,8 +44,6 @@ export function Header() {
       document.removeEventListener("keydown", onKeyDown);
     };
   }, [open]);
-
-  if (pathname === "/") return null;
 
   return (
     <header className={`site-header ${scrolled ? "is-scrolled" : ""}`}>

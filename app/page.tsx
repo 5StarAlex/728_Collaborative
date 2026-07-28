@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { DivisionCards } from "@/components/Cards";
 import { SectionHeading } from "@/components/Section";
 import { articles } from "@/lib/content";
@@ -46,44 +45,6 @@ const industryGroups = [
 export default function Home() {
   return (
     <>
-      <a className="skip-link" href="#home-main">Skip to content</a>
-      <nav className="landing-nav" aria-label="Primary">
-        <Link href="/" className="landing-logo" aria-label="728 Collaborative home">
-          <Image src="/assets/728-collaborative-logo.svg" alt="728 Collaborative LLC" width={170} height={170} priority />
-        </Link>
-        <ul className="landing-navlinks">
-          <li><Link href="/">Home</Link></li>
-          <li><Link href="/about">About</Link></li>
-          <li><Link href="/services">Services</Link></li>
-          <li><Link href="/industries">Industries</Link></li>
-          <li><Link href="/government-contracting">Government Contracting</Link></li>
-          <li><Link href="/insights">Insights</Link></li>
-          <li><Link href="/resources">Resources</Link></li>
-          <li><Link href="/contact">Contact</Link></li>
-        </ul>
-        <div className="landing-navright">
-          <a className="landing-icon-circle" href="https://www.linkedin.com" aria-label="LinkedIn">in</a>
-          <Link href="/schedule" className="landing-btn landing-btn-primary">Schedule a Discovery Call -&gt;</Link>
-        </div>
-        <details className="landing-mobile-menu">
-          <summary aria-label="Open mobile navigation">
-            <span></span>
-            <span></span>
-            <span></span>
-          </summary>
-          <div className="landing-mobile-menu-panel">
-            <Link href="/">Home</Link>
-            <Link href="/about">About</Link>
-            <Link href="/services">Services</Link>
-            <Link href="/industries">Industries</Link>
-            <Link href="/government-contracting">Government Contracting</Link>
-            <Link href="/insights">Insights</Link>
-            <Link href="/resources">Resources</Link>
-            <Link href="/contact">Contact</Link>
-          </div>
-        </details>
-      </nav>
-
       <section id="home-main" className="landing-hero landing-hero-centered">
         <div className="landing-hero-content">
           <div className="landing-eyebrow">
@@ -99,8 +60,8 @@ export default function Home() {
             Consulting, training, and support that help people and organizations move forward.
           </p>
           <div className="landing-ctas">
-            <Link href="/schedule" className="landing-btn landing-btn-primary">Schedule a Discovery Call -&gt;</Link>
-            <Link href="/services" className="landing-btn landing-btn-outline">Explore Our Services -&gt;</Link>
+            <Link href="/schedule" className="landing-btn landing-btn-primary">Schedule a Discovery Call →</Link>
+            <Link href="/services" className="landing-btn landing-btn-outline">Explore Our Services →</Link>
           </div>
           <div className="landing-proposal">
             <Link href="/request-proposal">Request a Proposal</Link>
