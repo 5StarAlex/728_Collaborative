@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { company, divisions, navItems } from "@/lib/site-data";
 import { NewsletterForm } from "./NewsletterForm";
 
@@ -22,8 +23,7 @@ export function Footer() {
       <div className="footer-main">
         <div className="footer-brand">
           <Link href="/" className="footer-logo-tile" aria-label="728 Collaborative home">
-            <span className="footer-mark">728</span>
-            <span className="footer-tile-sub">Collaborative LLC</span>
+            <Image src="/assets/728-collaborative-logo.svg" alt="728 Collaborative LLC" width={150} height={150} />
           </Link>
           <p>{company.description}</p>
           <p>{company.serviceArea}</p>

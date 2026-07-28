@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { divisions } from "@/lib/site-data";
 
-export function DivisionCards() {
+export function DivisionCards({ showServices = true }: { showServices?: boolean }) {
   return (
     <div className="division-grid">
       {divisions.map((division) => (
@@ -10,9 +10,11 @@ export function DivisionCards() {
           <h3>{division.name}</h3>
           <h4>{division.title}</h4>
           <p>{division.description}</p>
-          <ul className="check-list">
-            {division.services.slice(0, 6).map((service) => <li key={service}>{service}</li>)}
-          </ul>
+          {showServices && (
+            <ul className="check-list">
+              {division.services.slice(0, 6).map((service) => <li key={service}>{service}</li>)}
+            </ul>
+          )}
           <Link className="text-link" href={division.href}>{division.cta}</Link>
         </article>
       ))}

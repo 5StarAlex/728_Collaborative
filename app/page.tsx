@@ -1,21 +1,55 @@
 import Link from "next/link";
-import { DivisionCards, ItemGrid } from "@/components/Cards";
+import Image from "next/image";
+import { DivisionCards } from "@/components/Cards";
 import { SectionHeading } from "@/components/Section";
 import { articles } from "@/lib/content";
-import { challengeGroups, company, industryList, processSteps } from "@/lib/site-data";
+import { processSteps } from "@/lib/site-data";
+
+const homepageChallenges = [
+  {
+    title: "Leadership & Culture",
+    text: "Strengthen communication, engagement, manager confidence, and healthier team practices."
+  },
+  {
+    title: "Strategy & Systems",
+    text: "Clarify priorities, improve workflows, shape policy, and support practical implementation."
+  },
+  {
+    title: "Workforce & Learning",
+    text: "Build relevant training, retention strategies, curriculum, and professional growth pathways."
+  },
+  {
+    title: "Individual & Family Support",
+    text: "Help people navigate resources, transitions, advocacy needs, and coordinated next steps."
+  }
+];
+
+const industryGroups = [
+  {
+    title: "Healthcare & Human Services",
+    text: "Healthcare organizations, hospitals, home health, behavioral health, and human-service teams."
+  },
+  {
+    title: "Education & Early Learning",
+    text: "Early childhood programs, K-12 schools, colleges, universities, and professional learning teams."
+  },
+  {
+    title: "Mission-Driven Organizations",
+    text: "Nonprofits, faith-based organizations, community organizations, and local service partners."
+  },
+  {
+    title: "Public & Private Sector",
+    text: "Government agencies, businesses, corporations, and organizations with people-centered workforces."
+  }
+];
 
 export default function Home() {
   return (
     <>
       <a className="skip-link" href="#home-main">Skip to content</a>
-      <div className="landing-topstrip">
-        <span>NATIONWIDE VIRTUAL SERVICES · IN-PERSON ACROSS SC &amp; NC</span>
-        <Link href="/services/sw-at-home">SW@HOME - INDIVIDUAL &amp; FAMILY SUPPORT -&gt;</Link>
-      </div>
       <nav className="landing-nav" aria-label="Primary">
         <Link href="/" className="landing-logo" aria-label="728 Collaborative home">
-          <span className="landing-mark">728</span>
-          <span className="landing-full">Collaborative&nbsp;LLC</span>
+          <Image src="/assets/728-collaborative-logo.svg" alt="728 Collaborative LLC" width={170} height={170} priority />
         </Link>
         <ul className="landing-navlinks">
           <li><Link href="/">Home</Link></li>
@@ -33,13 +67,14 @@ export default function Home() {
         </div>
       </nav>
 
-      <section id="home-main" className="landing-hero">
-        <div>
+      <section id="home-main" className="landing-hero landing-hero-centered">
+        <div className="landing-hero-content">
           <div className="landing-eyebrow">
             <span className="landing-dot" aria-hidden="true"></span>
             <span className="landing-label">Strategic Consulting &amp; Professional Learning</span>
           </div>
-          <h1 className="landing-title">Stronger people.<br />Stronger organizations.<br /><em>Lasting impact.</em></h1>
+          <h1 className="landing-title landing-title-desktop">Stronger people.<br />Stronger organizations.<br /><em>Lasting impact.</em></h1>
+          <h1 className="landing-title landing-title-mobile">People.<br />Systems.<br />Impact.</h1>
           <p className="landing-copy">
             728 Collaborative helps organizations strengthen leadership, develop their workforce, improve systems, and create sustainable results through strategic consulting and professional learning. Through SW@Home, we also help individuals and families navigate resources, transitions, and essential support services.
           </p>
@@ -51,28 +86,6 @@ export default function Home() {
             <Link href="/request-proposal">Request a Proposal</Link>
             <span>RESPONSE WITHIN 1-2 BUSINESS DAYS</span>
           </div>
-        </div>
-
-        <div className="landing-dossier">
-          <div className="landing-dossier-tab">Our Process</div>
-          <div className="landing-dossier-head">
-            <div className="landing-label">How We Work</div>
-            <h2>Four phases, one engagement</h2>
-          </div>
-          {[
-            ["01", "Consulting Strategy", "Assess the organization and define a clear, actionable roadmap."],
-            ["02", "Professional Learning", "Build leadership and workforce capability through targeted training."],
-            ["03", "Coordinated Support", "Align systems and stakeholders around a shared plan of action."],
-            ["04", "Sustainable Impact", "Embed practices that outlast the engagement and keep delivering results."]
-          ].map(([num, title, text]) => (
-            <div className="landing-dossier-row" key={num}>
-              <div className="landing-dossier-num">{num}</div>
-              <div>
-                <h3>{title}</h3>
-                <p>{text}</p>
-              </div>
-            </div>
-          ))}
         </div>
       </section>
 
@@ -92,22 +105,22 @@ export default function Home() {
         </div>
       </div>
 
-      <section>
+      <section id="service-model" className="service-showcase">
         <div className="container">
           <SectionHeading eyebrow="Service Model" title="One Collaborative Firm. Three Specialized Divisions.">
             728 Collaborative brings consulting, professional learning, and personalized support together under one mission: helping people and organizations build stronger futures.
           </SectionHeading>
-          <DivisionCards />
+          <DivisionCards showServices={false} />
         </div>
       </section>
       <section className="cream">
         <div className="container">
           <SectionHeading eyebrow="Challenges We Address" title="Practical Solutions for Complex Organizational Challenges" />
-          <div className="feature-grid">
-            {challengeGroups.map((group) => (
+          <div className="feature-grid challenge-grid">
+            {homepageChallenges.map((group) => (
               <article className="feature-card reveal" key={group.title}>
                 <h3>{group.title}</h3>
-                <ul className="check-list">{group.items.map((item) => <li key={item}>{item}</li>)}</ul>
+                <p>{group.text}</p>
               </article>
             ))}
           </div>
@@ -123,23 +136,18 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="cream">
+      <section id="industries-served" className="cream">
         <div className="container">
           <SectionHeading eyebrow="Industries Served" title="Experience Across Mission-Driven and People-Centered Industries" />
-          <ItemGrid items={industryList} />
-          <p><Link className="text-link" href="/industries">View Industries We Serve</Link></p>
-        </div>
-      </section>
-      <section className="founder-panel">
-        <div className="container split">
-          <div className="portrait-placeholder">Professional headshot placeholder for Tatyana Lance. Replace before launch when an approved image is supplied.</div>
-          <div>
-            <p className="eyebrow">Founder & Principal Consultant</p>
-            <h2>Experience Grounded in Service, Strategy, and People</h2>
-            <h3>{company.founder}</h3>
-            <p>Tatyana Lance leads 728 Collaborative with a multidisciplinary foundation across social work, leadership, workforce development, training, human services, and organizational support. Her approach centers practical strategy, service, and systems that help people and organizations move forward with clarity.</p>
-            <Link className="button button-secondary" href="/about">Meet Our Founder</Link>
+          <div className="feature-grid challenge-grid industry-summary-grid" aria-label="Industries served">
+            {industryGroups.map((group) => (
+              <Link className="feature-card reveal" href="/industries" key={group.title}>
+                <h3>{group.title}</h3>
+                <p>{group.text}</p>
+              </Link>
+            ))}
           </div>
+          <p><Link className="text-link" href="/industries">View Industries We Serve</Link></p>
         </div>
       </section>
       <section>
