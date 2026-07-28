@@ -74,9 +74,12 @@ export default function Home() {
             <span className="landing-label">Strategic Consulting &amp; Professional Learning</span>
           </div>
           <h1 className="landing-title landing-title-desktop">Stronger people.<br />Stronger organizations.<br /><em>Lasting impact.</em></h1>
-          <h1 className="landing-title landing-title-mobile">People.<br />Systems.<br />Impact.</h1>
-          <p className="landing-copy">
+          <h1 className="landing-title landing-title-mobile">Stronger people.<br />Stronger organizations.<br /><em>Lasting impact.</em></h1>
+          <p className="landing-copy landing-copy-desktop">
             728 Collaborative helps organizations strengthen leadership, develop their workforce, improve systems, and create sustainable results through strategic consulting and professional learning. Through SW@Home, we also help individuals and families navigate resources, transitions, and essential support services.
+          </p>
+          <p className="landing-copy landing-copy-mobile">
+            Consulting, training, and support that help people and organizations move forward.
           </p>
           <div className="landing-ctas">
             <Link href="/schedule" className="landing-btn landing-btn-primary">Schedule a Discovery Call -&gt;</Link>
