@@ -31,7 +31,7 @@ export default function AboutPage() {
         </div>
         <div className="about-hero-overlay">
           <p className="eyebrow">About 728 Collaborative</p>
-          <h1>Empowering people. Building systems. Creating lasting impact.</h1>
+          <h1>About 728 Collaborative</h1>
           <p>728 Collaborative helps organizations and communities thrive through leadership development, workforce innovation, and sustainable growth.</p>
           <Link className="button button-primary" href="#founder">Schedule a Discovery Call</Link>
         </div>
