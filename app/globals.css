@@ -4784,3 +4784,71 @@ body {
   margin-top: auto !important;
   align-self: flex-start !important;
 }
+
+/* Final title-banner image map: each tab gets the most relevant local photo. */
+.about-hero {
+  --hero-photo: url("/assets/photos/consultation-conversation.jpg") !important;
+}
+
+.hero-services {
+  --hero-photo: url("/assets/photos/strategy-meeting.jpg") !important;
+}
+
+.hero-consulting {
+  --hero-photo: url("/assets/photos/national-consulting-skyline.jpg") !important;
+}
+
+.hero-learning {
+  --hero-photo: url("/assets/photos/professional-learning-session.jpg") !important;
+}
+
+.hero-support {
+  --hero-photo: url("/assets/photos/family-support-conversation.jpg") !important;
+}
+
+.hero-industries,
+.hero-industry-detail {
+  --hero-photo: url("/assets/photos/columbia-community-five-points.jpg") !important;
+}
+
+.hero-government,
+.hero-legal {
+  --hero-photo: url("/assets/photos/civic-columns-government.jpg") !important;
+}
+
+.hero-insights {
+  --hero-photo: url("/assets/photos/professional-workplace.jpg") !important;
+}
+
+.hero-resources {
+  --hero-photo: url("/assets/photos/strategy-meeting.jpg") !important;
+}
+
+.hero-contact,
+.hero-schedule {
+  --hero-photo: url("/assets/photos/consultation-conversation.jpg") !important;
+}
+
+.hero-proposal {
+  --hero-photo: url("/assets/photos/national-consulting-skyline.jpg") !important;
+}
+
+.about-hero,
+.page-hero,
+.hero-services,
+.hero-consulting,
+.hero-learning,
+.hero-support,
+.hero-industries,
+.hero-industry-detail,
+.hero-government,
+.hero-insights,
+.hero-resources,
+.hero-contact,
+.hero-schedule,
+.hero-proposal,
+.hero-legal {
+  background:
+    linear-gradient(90deg, rgba(250, 246, 239, .94) 0%, rgba(250, 246, 239, .86) 48%, rgba(250, 246, 239, .72) 100%),
+    var(--hero-photo) center / cover no-repeat !important;
+}
