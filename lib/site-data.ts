@@ -11,11 +11,11 @@ export const company = {
   hours: "Monday-Friday, 9:00 AM-5:00 PM Eastern Time. Consulting and training available by appointment.",
   founder: "Tatyana Lance, MBA, MSW, LMSW, LCSW-A",
   mission:
-    "728 Collaborative empowers professionals, strengthens organizations, and supports individuals and families through strategic consulting, professional training, workforce development, and innovative support services that create lasting impact in the communities we serve.",
+    "We empower professionals, strengthen organizations, and support individuals and families through strategic consulting, professional training, workforce development, and innovative support services that create lasting impact in the communities we serve.",
   vision:
     "To be a trusted leader in consulting, professional learning, and community support by helping organizations thrive, professionals grow, and individuals and families build stronger futures through collaborative, innovative, and sustainable solutions.",
   description:
-    "728 Collaborative LLC is a strategic consulting and workforce development firm dedicated to helping organizations strengthen leadership, improve workplace culture, develop professionals, and build sustainable systems that improve organizational performance."
+    "We are a strategic consulting and workforce development firm dedicated to helping organizations strengthen leadership, improve workplace culture, develop professionals, and build sustainable systems that improve organizational performance."
 };
 
 export const navItems = [
@@ -231,4 +231,3 @@ export const swServices = [
 
 export const legalDisclaimer =
   "Services provided by 728 Collaborative LLC are non-clinical in nature and do not constitute psychotherapy, mental health treatment, or clinical social work services. Training and professional development content is educational and does not establish a therapeutic relationship. Legal, licensing, adoption-investigation, clinical-disclaimer, privacy, and professional-service language should be reviewed by the company before launch.";
-

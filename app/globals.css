@@ -4821,7 +4821,7 @@ body {
 }
 
 .hero-resources {
-  --hero-photo: url("/assets/photos/resource-desk-laptop.jpg") !important;
+  --hero-photo: url("/assets/photos/resource-library-books.jpg") !important;
 }
 
 .hero-schedule {
@@ -4854,4 +4854,45 @@ body {
   background:
     linear-gradient(90deg, rgba(250, 246, 239, .94) 0%, rgba(250, 246, 239, .86) 48%, rgba(250, 246, 239, .72) 100%),
     var(--hero-photo) center / cover no-repeat !important;
+}
+
+@media (max-width: 620px) {
+  .page-hero {
+    overflow-x: hidden !important;
+  }
+
+  .page-hero .container,
+  .page-hero .narrow {
+    width: min(100% - 32px, 358px) !important;
+    max-width: 358px !important;
+    margin-inline: auto !important;
+    justify-items: center !important;
+    text-align: center !important;
+  }
+
+  .page-hero h1 {
+    width: 100% !important;
+    max-width: 255px !important;
+    font-size: clamp(1.7rem, 6.5vw, 1.95rem) !important;
+    line-height: 1.08 !important;
+    overflow-wrap: normal !important;
+    text-wrap: balance;
+  }
+
+  .page-hero .large,
+  .page-hero p:not(.eyebrow) {
+    width: 100% !important;
+    max-width: 318px !important;
+    font-size: .95rem !important;
+    line-height: 1.5 !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  .page-hero .button-row,
+  .page-hero .button-row .button {
+    width: 100% !important;
+    max-width: 268px !important;
+    min-width: 0 !important;
+    justify-content: center !important;
+  }
 }

@@ -9,7 +9,7 @@ export const articles = [
       "Leadership programs work best when they connect directly to communication habits, decision-making rhythms, and the real pressures managers face each week.",
     body: [
       "Effective leadership development is more than a training event. It is a structured learning process that helps leaders practice, reflect, and apply new behaviors in the environment where performance actually happens.",
-      "728 Collaborative designs leadership learning around the organization's goals, workforce needs, culture, and implementation capacity. The result is training that feels relevant instead of abstract."
+      "We design leadership learning around the organization's goals, workforce needs, culture, and implementation capacity. The result is training that feels relevant instead of abstract."
     ]
   },
   {
@@ -75,8 +75,8 @@ export const resources = [
 
 export const faqs: Record<string, Array<[string, string]>> = {
   general: [
-    ["Does 728 Collaborative work nationwide?", "Yes. Consulting and training can be delivered virtually nationwide. In-person services are available throughout South Carolina and North Carolina by appointment."],
-    ["Is 728 Collaborative a therapy practice?", "No. 728 Collaborative and SW@Home provide non-clinical consulting, training, coordination, education, and support services. The company does not provide psychotherapy or crisis services through the website."],
+    ["Do you work nationwide?", "Yes. Consulting and training can be delivered virtually nationwide. In-person services are available throughout South Carolina and North Carolina by appointment."],
+    ["Is this a therapy practice?", "No. We provide non-clinical consulting, training, coordination, education, and support services. The company does not provide psychotherapy or crisis services through the website."],
     ["Can services be customized?", "Yes. Engagements are scoped around the client, audience, goals, timeline, and operating environment."]
   ],
   consulting: [

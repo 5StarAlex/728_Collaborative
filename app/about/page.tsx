@@ -53,7 +53,7 @@ export default function AboutPage() {
           <div>
             <p className="eyebrow">Company Story</p>
             <h2>Change begins with people.</h2>
-            <p className="large">Founded in 2026, 728 Collaborative was built on the belief that lasting change starts with people. We strengthen leadership, improve workplace culture, and design systems that drive better outcomes for organizations and families alike.</p>
+            <p className="large">Founded in 2026, we were built on the belief that lasting change starts with people. We strengthen leadership, improve workplace culture, and design systems that drive better outcomes for organizations and families alike.</p>
             <div className="highlight-list">
               {storyHighlights.map(([title, text]) => (
                 <article className="highlight-item" key={title}>

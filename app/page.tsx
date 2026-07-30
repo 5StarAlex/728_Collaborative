@@ -89,7 +89,7 @@ export default function Home() {
       <section id="service-model" className="service-showcase">
         <div className="container">
           <SectionHeading eyebrow="Service Model" title="One Collaborative Firm. Three Specialized Divisions.">
-            728 Collaborative brings consulting, professional learning, and personalized support together under one mission: helping people and organizations build stronger futures.
+            We bring consulting, professional learning, and personalized support together under one mission: helping people and organizations build stronger futures.
           </SectionHeading>
           <DivisionCards showServices={false} />
         </div>
