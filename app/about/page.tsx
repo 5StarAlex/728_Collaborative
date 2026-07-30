@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Breadcrumbs } from "@/components/Section";
 import { company } from "@/lib/site-data";
 import { pageMetadata } from "@/lib/seo";
@@ -101,12 +102,21 @@ export default function AboutPage() {
 
       <section id="founder">
         <div className="container split">
-          <div className="portrait-placeholder">Approved founder headshot pending</div>
+          <div className="founder-portrait">
+            <Image
+              src="/assets/photos/tatyana-lance.jpg"
+              alt="Tatyana Lance, founder and principal consultant of 728 Collaborative"
+              width={1200}
+              height={900}
+              sizes="(max-width: 900px) calc(100vw - 48px), 520px"
+            />
+          </div>
           <div>
             <p className="eyebrow">Founder & Principal Consultant</p>
             <h2>{company.founder}</h2>
-            <p>Tatyana Lance brings a multidisciplinary perspective across social work, professional learning, leadership, workforce development, human services, healthcare-adjacent systems, and organizational support. Her credentials are presented accurately and do not imply services beyond the firm’s stated non-clinical scope.</p>
-            <p>The website is structured for future team growth, including additional consultants, trainers, facilitators, advisors, and support professionals as the firm expands.</p>
+            <p>Tatyana Lance brings a multidisciplinary perspective across social work, professional learning, leadership, workforce development, human services, healthcare-adjacent systems, and organizational support.</p>
+            <p>Daughter of Cathy Lance-Timmons, Tatyana holds a Master of Social Work and a Master of Business Administration, and is a Licensed Master Social Worker and Licensed Clinical Social Worker Associate. Her work is shaped by a deep commitment to community, education, service, and meaningful support for the people and organizations she serves.</p>
+            <p>She founded The Cathy Lance Timmons Foundation as a way to give back to the community her mother advocated for and loved so deeply, keeping her legacy alive while encouraging others in positive and meaningful ways.</p>
             <Link className="button button-primary" href="/contact">Schedule a Consultation</Link>
           </div>
         </div>
