@@ -4791,11 +4791,11 @@ body {
 }
 
 .hero-services {
-  --hero-photo: url("/assets/photos/strategy-meeting.jpg") !important;
+  --hero-photo: url("/assets/photos/business-workstation.jpg") !important;
 }
 
 .hero-consulting {
-  --hero-photo: url("/assets/photos/national-consulting-skyline.jpg") !important;
+  --hero-photo: url("/assets/photos/charlotte-skyline.jpg") !important;
 }
 
 .hero-learning {
@@ -4817,20 +4817,23 @@ body {
 }
 
 .hero-insights {
-  --hero-photo: url("/assets/photos/professional-workplace.jpg") !important;
+  --hero-photo: url("/assets/photos/resource-desk-laptop.jpg") !important;
 }
 
 .hero-resources {
-  --hero-photo: url("/assets/photos/strategy-meeting.jpg") !important;
+  --hero-photo: url("/assets/photos/resource-desk-laptop.jpg") !important;
 }
 
-.hero-contact,
 .hero-schedule {
+  --hero-photo: url("/assets/photos/schedule-clock-office.jpg") !important;
+}
+
+.hero-contact {
   --hero-photo: url("/assets/photos/consultation-conversation.jpg") !important;
 }
 
 .hero-proposal {
-  --hero-photo: url("/assets/photos/national-consulting-skyline.jpg") !important;
+  --hero-photo: url("/assets/photos/charlotte-skyline.jpg") !important;
 }
 
 .about-hero,
